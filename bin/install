@@ -11,7 +11,7 @@ set \
 : "${ASDF_INSTALL_PATH?}"
 : "${ASDF_DOWNLOAD_PATH?}"
 
-readonly toolname="shprofile"
+readonly toolname="shprofile.sh"
 
 install() {
     local -r filename="${ASDF_INSTALL_VERSION}.tar.gz"
