@@ -17,10 +17,9 @@ install() {
     local -r filename="${ASDF_INSTALL_VERSION}.tar.gz"
     local -r download_pkg="${ASDF_DOWNLOAD_PATH}/${filename}"
 
-    set -x
     echo "Extracting ${toolname} from tar archive"
     [ ! -d "${ASDF_INSTALL_PATH}/bin" ] && mkdir -p "${ASDF_INSTALL_PATH}/bin"
-    if tar xf "$download_pkg" -C "${ASDF_INSTALL_PATH}/bin" --strip-components=1 "${toolname}-${ASDF_INSTALL_VERSION}/${toolname}.sh" # 2>/dev/null
+    if tar xf "$download_pkg" -C "${ASDF_INSTALL_PATH}/bin" --strip-components=1 "${toolname}-${ASDF_INSTALL_VERSION}/${toolname}.sh" 2>/dev/null
     then
       echo "Successfully installed ${toolname} ${ASDF_INSTALL_VERSION}"
       exit 0
